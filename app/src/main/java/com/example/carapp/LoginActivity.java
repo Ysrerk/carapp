@@ -3,6 +3,7 @@ package com.example.carapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,11 +21,18 @@ public class LoginActivity extends AppCompatActivity {
     Button loginbutton;
     String emailv,passwordv;
 
+    SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         definition();
+        sharedPreferences=getApplicationContext().getSharedPreferences("loginshared",0);
+        if(sharedPreferences.getString("userid",null)!=null && sharedPreferences.getString("email",null)!=null){
+            Intent intent=new Intent(LoginActivity.this,MainActivity.class);
+            startActivity(intent);
+        }
         loginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +65,13 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<Member> call, Response<Member> response) {
                 if(response.isSuccessful()){
                     if(response.body().getEmail()!=null && response.body().getPassword()!=null){
+                        String userid=String.valueOf(response.body().getId());
+                        String email=response.body().getEmail();
+                        sharedPreferences=getApplicationContext().getSharedPreferences("loginshared",0);
+                        SharedPreferences.Editor editor= sharedPreferences.edit();
+                        editor.putString("userid",userid);
+                        editor.putString("email",email);
+                        editor.commit();
                         Intent intent=new Intent(LoginActivity.this,MainActivity.class);
                         startActivity(intent);
                     }
