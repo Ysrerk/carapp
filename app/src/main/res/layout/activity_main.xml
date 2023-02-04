@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#091414"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#D4C6C6"></androidx.viewpager.widget.ViewPager>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/adsbutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+
+                android:backgroundTint="@color/butonrengi"
+                android:drawableTop="@drawable/car64"
+                android:text="Ads"></Button>
+
+            <Button
+                android:id="@+id/newadsbutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:backgroundTint="@color/butonrengi"
+                android:drawableTop="@drawable/add"
+                android:text="New Add Ads"></Button>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/contactinfobutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:backgroundTint="@color/butonrengi"
+                android:drawableTop="@drawable/contact"
+                android:text="Contact Info"></Button>
+
+            <Button
+                android:id="@+id/favoritebutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:backgroundTint="@color/butonrengi"
+                android:drawableTop="@drawable/favorites"
+                android:text="Favorites"></Button>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

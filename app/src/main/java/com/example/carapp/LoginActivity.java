@@ -1,0 +1,83 @@
+package com.example.carapp;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import Models.Member;
+import RestApi.ManagerAll;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class LoginActivity extends AppCompatActivity {
+    EditText emailedit,passwordedit;
+    Button loginbutton;
+    String emailv,passwordv;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+        definition();
+        loginbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getvalueedittext();
+                login(emailv,passwordv);
+            }
+        });
+    }
+
+
+
+    public void definition (){
+
+        emailedit=findViewById(R.id.emailedittext);
+        passwordedit=findViewById(R.id.passwordedittext);
+        loginbutton=findViewById(R.id.loginbutton);
+    }
+
+    public void getvalueedittext(){
+
+        emailv=emailedit.getText().toString();
+        passwordv=passwordedit.getText().toString();
+
+    }
+
+    public void login(String emailv,String passwordv){
+        Call<Member> request= ManagerAll.getInstance().getmember(emailv,passwordv);
+        request.enqueue(new Callback<Member>() {
+            @Override
+            public void onResponse(Call<Member> call, Response<Member> response) {
+                if(response.isSuccessful()){
+                    if(response.body().getEmail()!=null && response.body().getPassword()!=null){
+                        Intent intent=new Intent(LoginActivity.this,MainActivity.class);
+                        startActivity(intent);
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(),"invalid useror password",Toast.LENGTH_LONG).show();
+
+
+                        Intent intent=new Intent(LoginActivity.this,LoginActivity.class);
+                        startActivity(intent);
+                    }
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<Member> call, Throwable t) {
+
+
+
+
+            }
+        });
+    }
+}

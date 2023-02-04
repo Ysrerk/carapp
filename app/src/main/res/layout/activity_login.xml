@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9E1616"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/mater">
+
+    </ImageView>
+
+    <EditText
+        android:id="@+id/emailedittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="15dp"
+        android:backgroundTint="@color/edittextrengi"
+        android:backgroundTintMode="src_over"
+        android:hint="Please Enter Email Address"
+        android:inputType="textEmailAddress"
+        android:textColor="#091414"
+        android:textColorHint="#D4C6C6"
+        android:textStyle="bold"></EditText>
+
+    <EditText
+        android:id="@+id/passwordedittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:backgroundTint="@color/edittextrengi"
+        android:backgroundTintMode="src_over"
+        android:hint="Please Enter Password"
+        android:inputType="textPassword"
+        android:textColor="#091414"
+        android:textColorHint="#D4C6C6"
+        android:textStyle="bold">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginRight="15dp"
+        android:backgroundTint="@color/black"
+        android:text="Log In"
+        android:textColor="@color/white"
+        android:textStyle="bold|italic"></Button>
+
+
+</LinearLayout>
