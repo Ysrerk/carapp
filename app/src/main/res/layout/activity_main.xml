@@ -44,6 +44,7 @@
                 android:drawableTop="@drawable/car64"
                 android:text="Ads"></Button>
 
+
             <Button
                 android:id="@+id/newadsbutton"
                 android:layout_width="0dp"

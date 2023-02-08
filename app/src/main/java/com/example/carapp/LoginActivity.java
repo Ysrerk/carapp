@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import Models.Member;
@@ -20,6 +21,8 @@ public class LoginActivity extends AppCompatActivity {
     EditText emailedit,passwordedit;
     Button loginbutton;
     String emailv,passwordv;
+
+    TextView signuptextview;
 
     SharedPreferences sharedPreferences;
 
@@ -40,6 +43,14 @@ public class LoginActivity extends AppCompatActivity {
                 login(emailv,passwordv);
             }
         });
+        signuptextview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signup();
+            }
+        });
+
+
     }
 
 
@@ -49,6 +60,7 @@ public class LoginActivity extends AppCompatActivity {
         emailedit=findViewById(R.id.emailedittext);
         passwordedit=findViewById(R.id.passwordedittext);
         loginbutton=findViewById(R.id.loginbutton);
+        signuptextview=findViewById(R.id.signuptextview);
     }
 
     public void getvalueedittext(){
@@ -94,5 +106,11 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void signup(){
+        Intent intent=new Intent(LoginActivity.this,RegisterActivity.class);
+        startActivity(intent);
+
     }
 }
