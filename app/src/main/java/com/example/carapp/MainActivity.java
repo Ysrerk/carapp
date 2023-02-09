@@ -2,15 +2,19 @@ package com.example.carapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView useremailtextview;
+    TextView useremailtextview,logouttextview;
     String useremailv,useremailbv;
+    SharedPreferences.Editor editor;
+    SharedPreferences preferences;
 
 
     @Override
@@ -20,10 +24,21 @@ public class MainActivity extends AppCompatActivity {
         definition();
         getvaluefromintent();
 
+        logouttextview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                logout();
+
+
+            }
+        });
+
     }
 
     public void definition(){
         useremailtextview=findViewById(R.id.museremailtextview);
+        logouttextview=findViewById(R.id.mlogouttextview);
     }
 
     public void getvaluefromintent(){
@@ -37,6 +52,17 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences shared=getSharedPreferences("loginshared",0);
         useremailv=(shared.getString("email",""));
+
+    }
+    public void logout(){
+        SharedPreferences shared=getSharedPreferences("loginshared",0);
+        editor = shared.edit();
+        editor.clear();
+        editor.commit();
+        Intent intent=new Intent(MainActivity.this,LoginActivity.class);
+
+        startActivity(intent);
+
 
     }
 }

@@ -14,12 +14,35 @@
         android:layout_height="200dp"
         android:orientation="vertical">
 
-        <TextView
-             android:layout_marginTop="10dp" android:textColor="@color/white" android:textStyle="bold|italic"
-            android:layout_width="match_parent" android:layout_gravity="left" android:gravity="left"
-            android:layout_height="wrap_content" android:text="UserEMail" android:id="@+id/museremailtextview">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        </TextView>
+            <TextView
+                android:id="@+id/museremailtextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="UserEMail"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/mlogouttextview"
+                android:layout_width="wrap_content" android:layout_marginLeft="210dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:text="Logout"
+                android:textColor="@color/white"></TextView>
+
+        </LinearLayout>
+
 
         <androidx.viewpager.widget.ViewPager
             android:layout_width="match_parent"
@@ -45,11 +68,11 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="1dp"
                 android:layout_weight="1"
-                android:textStyle="bold"
-
                 android:backgroundTint="@color/butonrengi"
+
                 android:drawableTop="@drawable/car64"
-                android:text="Ads"></Button>
+                android:text="Ads"
+                android:textStyle="bold"></Button>
 
 
             <Button
@@ -59,10 +82,10 @@
                 android:layout_marginLeft="1dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:textStyle="bold"
                 android:backgroundTint="@color/butonrengi"
                 android:drawableTop="@drawable/add"
-                android:text="New Add Ads"></Button>
+                android:text="New Add Ads"
+                android:textStyle="bold"></Button>
         </LinearLayout>
 
 
@@ -78,10 +101,10 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="1dp"
                 android:layout_weight="1"
-                android:textStyle="bold"
                 android:backgroundTint="@color/butonrengi"
                 android:drawableTop="@drawable/contact"
-                android:text="Contact Info"></Button>
+                android:text="Contact Info"
+                android:textStyle="bold"></Button>
 
             <Button
                 android:id="@+id/favoritebutton"
@@ -90,10 +113,10 @@
                 android:layout_marginLeft="1dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:textStyle="bold"
                 android:backgroundTint="@color/butonrengi"
                 android:drawableTop="@drawable/favorites"
-                android:text="Favorites"></Button>
+                android:text="Favorites"
+                android:textStyle="bold"></Button>
         </LinearLayout>
 
 
