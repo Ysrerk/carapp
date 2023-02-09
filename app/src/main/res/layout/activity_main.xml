@@ -14,6 +14,13 @@
         android:layout_height="200dp"
         android:orientation="vertical">
 
+        <TextView
+             android:layout_marginTop="10dp" android:textColor="@color/white" android:textStyle="bold|italic"
+            android:layout_width="match_parent" android:layout_gravity="left" android:gravity="left"
+            android:layout_height="wrap_content" android:text="UserEMail" android:id="@+id/museremailtextview">
+
+        </TextView>
+
         <androidx.viewpager.widget.ViewPager
             android:layout_width="match_parent"
             android:layout_height="match_parent"

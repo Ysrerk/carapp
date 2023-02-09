@@ -2,6 +2,7 @@ package RestApi;
 
 import Models.Member;
 import Models.Register;
+import Models.Verification;
 import retrofit2.Call;
 
 public class ManagerAll  extends  BaseManager{
@@ -19,6 +20,11 @@ public class ManagerAll  extends  BaseManager{
     public Call<Register> registerm(String email, String password,String username,String phone,String country){
         Call<Register> registration= getRestApiClient().register(email,password,username,phone,country);
         return registration;
+
+    }
+    public Call<Verification> verifymember(String verificationcode){
+        Call<Verification> verifymember= getRestApiClient().verify(verificationcode);
+        return verifymember;
 
     }
 }
