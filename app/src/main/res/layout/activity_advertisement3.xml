@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:background="#34495E"
+    android:layout_height="match_parent" android:orientation="vertical"
+    tools:context=".AdvertisementActivity3">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/addcar">
+
+    </ImageView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="ADD IMAGES" android:textColor="#ECF0F1" android:layout_gravity="center" android:gravity="center"></TextView>
+
+    <Button
+        android:id="@+id/a3chooseimagebutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="35dp"
+        android:text="Choose Image"></Button>
+
+    <ImageView
+        android:id="@+id/a3imageview"  android:layout_margin="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ImageView>
+    <Button
+        android:id="@+id/a3addimagebutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Image"></Button>
+    <Button
+        android:id="@+id/a3publishadvbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#EB4549"
+        android:text="Publish Advertisment"></Button>
+
+</LinearLayout>

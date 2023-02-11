@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F79C3"
+    android:orientation="vertical"
+    tools:context=".AdvertismentActivity2">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/addcar">
+
+    </ImageView>
+
+    <EditText
+        android:id="@+id/ayearedittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Please enter year *"
+        android:textColor="#F8F2E2"
+        android:textColorHint="@color/black">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/amakeedittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Please enter make *"
+        android:textColor="#F8F2E2"
+        android:textColorHint="@color/black">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/amodeledittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Please enter model *"
+        android:textColor="#F8F2E2"
+        android:textColorHint="@color/black">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/acolouredittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Please enter colour *"
+        android:textColor="#F8F2E2"
+        android:textColorHint="@color/black">
+
+    </EditText>
+
+    <Spinner
+        android:id="@+id/afuelspinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+
+    <EditText
+        android:id="@+id/akilometeredittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Please enter kilometers *"
+        android:textColor="#F8F2E2"
+        android:textColorHint="@color/black">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/apriceedittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Please enter price *"
+        android:textColor="#F8F2E2"
+        android:textColorHint="@color/black">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/a2nextbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#EB4549"
+        android:text="next"></Button>
+
+
+</LinearLayout>

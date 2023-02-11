@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3BC391"
+    android:orientation="vertical"
+    tools:context=".AdvertisementActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/addcar">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center" android:layout_marginBottom="50dp"
+        android:text="ADD NEW CAR ADVERTISEMENT"
+        android:textColor="#ECF0F1"></TextView>
+
+
+    <EditText
+        android:id="@+id/atitleedittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="please enter advertisment title"
+        android:textColor="#F8F2E2"
+        android:textColorHint="@color/black"></EditText>
+
+    <EditText
+        android:id="@+id/adescriptionedittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="please enter advertisment description"
+        android:textColor="#F8F2E2"
+        android:textColorHint="@color/black"></EditText>
+
+    <Spinner
+        android:id="@+id/aprovincespinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white">
+
+    </Spinner>
+
+
+    <EditText
+        android:id="@+id/acityedittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Please enter city *"
+        android:textColor="#F8F2E2"
+        android:textColorHint="@color/black">
+
+    </EditText>
+
+
+    <Button
+        android:id="@+id/anextbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="#EB4549"
+        android:text="Next"></Button>
+
+
+</LinearLayout>
