@@ -20,7 +20,7 @@
             android:name=".AdvertisementActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".AdvertismentActivity2"
             android:exported="false" />
         <activity
             android:name=".VerificationActivity"
@@ -32,7 +32,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".AdvertismentActivity2"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

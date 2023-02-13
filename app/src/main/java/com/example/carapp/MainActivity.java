@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
     String useremailv,useremailbv;
     SharedPreferences.Editor editor;
     SharedPreferences preferences;
+
+    Button addnewadvbutton;
+
 
 
     @Override
@@ -34,11 +38,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        addnewadvbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,AdvertisementActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
+
+
+
 
     public void definition(){
         useremailtextview=findViewById(R.id.museremailtextview);
         logouttextview=findViewById(R.id.mlogouttextview);
+        addnewadvbutton=findViewById(R.id.newadsbutton);
     }
 
     public void getvaluefromintent(){

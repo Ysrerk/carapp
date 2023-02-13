@@ -40,5 +40,11 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#EB4549"
         android:text="Publish Advertisment"></Button>
+    <Button
+        android:id="@+id/a3backbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#EB4549"
+        android:text="back"></Button>
 
 </LinearLayout>

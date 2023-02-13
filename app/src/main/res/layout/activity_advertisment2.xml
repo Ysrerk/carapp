@@ -13,16 +13,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:background="@drawable/addcar">
 
     </ImageView>
 
     <EditText
-        android:id="@+id/ayearedittext"
+        android:id="@+id/a2yearedittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:hint="Please enter year *"
         android:textColor="#F8F2E2"
         android:textColorHint="@color/black">
@@ -30,7 +32,7 @@
     </EditText>
 
     <EditText
-        android:id="@+id/amakeedittext"
+        android:id="@+id/a2makeedittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -41,7 +43,7 @@
     </EditText>
 
     <EditText
-        android:id="@+id/amodeledittext"
+        android:id="@+id/a2modeledittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -52,7 +54,7 @@
     </EditText>
 
     <EditText
-        android:id="@+id/acolouredittext"
+        android:id="@+id/a2colouredittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -63,13 +65,13 @@
     </EditText>
 
     <Spinner
-        android:id="@+id/afuelspinner"
+        android:id="@+id/a2fuelspinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></Spinner>
 
 
     <EditText
-        android:id="@+id/akilometeredittext"
+        android:id="@+id/a2kilometeredittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -80,10 +82,12 @@
     </EditText>
 
     <EditText
-        android:id="@+id/apriceedittext"
+        android:id="@+id/a2priceedittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:hint="Please enter price *"
         android:textColor="#F8F2E2"
         android:textColorHint="@color/black">
@@ -96,6 +100,12 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#EB4549"
         android:text="next"></Button>
+    <Button
+        android:id="@+id/a2backbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#EB4549"
+        android:text="back"></Button>
 
 
 </LinearLayout>
