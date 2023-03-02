@@ -20,6 +20,7 @@ public class AdvertisementActivity3 extends AppCompatActivity {
 
     Button choseimagebutton,addimagebutton,publishadvbutton,backbutton;
     ImageView imageView;
+    String advidv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,8 @@ public class AdvertisementActivity3 extends AppCompatActivity {
             public void onResponse(Call<Advresult> call, Response<Advresult> response) {
                 if (response.body().getResult()){
                     Toast.makeText(getApplicationContext(),"Advertisement  published successfully",Toast.LENGTH_LONG).show();
+                    //ilan numarasi alindi
+                    advidv=response.body().getAdvid();
                 }
 
             }
