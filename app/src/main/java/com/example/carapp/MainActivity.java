@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     TextView useremailtextview,logouttextview;
-    String useremailv,useremailbv;
+    String useremailv,useremailbv,useridv;
     SharedPreferences.Editor editor;
     SharedPreferences preferences;
 
@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,AdvertisementActivity.class);
+                intent.putExtra("userid",useridv);
                 startActivity(intent);
                 finish();
             }
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences shared=getSharedPreferences("loginshared",0);
         useremailv=(shared.getString("email",""));
+        useridv=(shared.getString("userid",""));
 
     }
     public void logout(){

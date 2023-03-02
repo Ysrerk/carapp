@@ -1,5 +1,6 @@
 package RestApi;
 
+import Models.Advresult;
 import Models.Member;
 import Models.Register;
 import Models.Verification;
@@ -19,4 +20,8 @@ public interface RestApi {
     @FormUrlEncoded
     @POST("/verification.php")
     Call<Verification> verify(@Field("verificationcode") String verificationcode);
+
+    @FormUrlEncoded
+    @POST("/addadver.php")
+    Call<Advresult> addadv(@Field("memberid") String memberid, @Field("title") String title, @Field("description") String description, @Field("province") String province, @Field("city") String city , @Field("year") String year, @Field("make") String make, @Field("model") String model, @Field("colour") String colour , @Field("fueltype") String fueltype, @Field("kilometer") String kilometer, @Field("price") String price);
 }
