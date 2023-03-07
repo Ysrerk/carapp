@@ -1,5 +1,6 @@
 package RestApi;
 
+import Models.Addimage;
 import Models.Advresult;
 import Models.Member;
 import Models.Register;
@@ -32,6 +33,12 @@ public class ManagerAll  extends  BaseManager{
     public Call<Advresult> addadv(String memberid,String title,String description,String province,String city,String year,String make,String model,String colour,String fueltype,String kilometer,String price){
         Call<Advresult> advresult= getRestApiClient().addadv(memberid,title,description,province,city,year,make,model,colour,fueltype,kilometer,price);
         return advresult;
+
+    }
+
+    public Call<Addimage> addimage(String memberid,String advid,String image){
+        Call<Addimage> verifymember= getRestApiClient().addimage(memberid,advid,image);
+        return verifymember;
 
     }
 }

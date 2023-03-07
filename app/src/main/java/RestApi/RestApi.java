@@ -1,5 +1,6 @@
 package RestApi;
 
+import Models.Addimage;
 import Models.Advresult;
 import Models.Member;
 import Models.Register;
@@ -24,4 +25,9 @@ public interface RestApi {
     @FormUrlEncoded
     @POST("/addadver.php")
     Call<Advresult> addadv(@Field("memberid") String memberid, @Field("title") String title, @Field("description") String description, @Field("province") String province, @Field("city") String city , @Field("year") String year, @Field("make") String make, @Field("model") String model, @Field("colour") String colour , @Field("fueltype") String fueltype, @Field("kilometer") String kilometer, @Field("price") String price);
+
+    @FormUrlEncoded
+    @POST("/addimage.php")
+    Call<Addimage> addimage(@Field("memberid") String memberid, @Field("advid") String advid, @Field("image") String base64String);
+
 }
