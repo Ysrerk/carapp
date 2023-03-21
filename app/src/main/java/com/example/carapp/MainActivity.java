@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences.Editor editor;
     SharedPreferences preferences;
 
-    Button addnewadvbutton;
+    Button addnewadvbutton,adsbutton;
 
 
 
@@ -48,6 +48,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        adsbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,AdsActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 
 
@@ -57,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         useremailtextview=findViewById(R.id.museremailtextview);
         logouttextview=findViewById(R.id.mlogouttextview);
         addnewadvbutton=findViewById(R.id.newadsbutton);
+        adsbutton=findViewById(R.id.adsbutton);
     }
 
     public void getvaluefromintent(){

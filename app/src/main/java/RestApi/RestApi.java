@@ -1,6 +1,9 @@
 package RestApi;
 
+import java.util.List;
+
 import Models.Addimage;
+import Models.Ads;
 import Models.Advresult;
 import Models.Member;
 import Models.Register;
@@ -8,6 +11,7 @@ import Models.Verification;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface RestApi {
@@ -29,5 +33,8 @@ public interface RestApi {
     @FormUrlEncoded
     @POST("/addimage.php")
     Call<Addimage> addimage(@Field("memberid") String memberid, @Field("advid") String advid, @Field("image") String base64String);
+
+    @GET("/ads.php")
+    Call<List<Ads>> listads();
 
 }

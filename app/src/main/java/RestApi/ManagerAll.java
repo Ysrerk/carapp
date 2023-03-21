@@ -1,6 +1,9 @@
 package RestApi;
 
+import java.util.List;
+
 import Models.Addimage;
+import Models.Ads;
 import Models.Advresult;
 import Models.Member;
 import Models.Register;
@@ -40,5 +43,10 @@ public class ManagerAll  extends  BaseManager{
         Call<Addimage> verifymember= getRestApiClient().addimage(memberid,advid,image);
         return verifymember;
 
+    }
+
+    public Call<List<Ads>>getAds(){
+        Call<List<Ads>> ads=getRestApiClient().listads();
+        return ads;
     }
 }
