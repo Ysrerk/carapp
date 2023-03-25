@@ -4,9 +4,11 @@ import java.util.List;
 
 import Models.Addimage;
 import Models.Ads;
+import Models.Adsdetail;
 import Models.Advresult;
 import Models.Member;
 import Models.Register;
+import Models.SliderImage;
 import Models.Verification;
 import retrofit2.Call;
 
@@ -48,5 +50,17 @@ public class ManagerAll  extends  BaseManager{
     public Call<List<Ads>>getAds(){
         Call<List<Ads>> ads=getRestApiClient().listads();
         return ads;
+    }
+
+    public Call<Adsdetail> getadsdetail(String advid){
+        Call<Adsdetail> adsdetail=getRestApiClient().adsdetail(advid);
+        return adsdetail;
+
+    }
+
+    public Call<List<SliderImage>> getadimage(String advid){
+        Call<List<SliderImage>> addimage=getRestApiClient().adimages(advid);
+        return addimage;
+
     }
 }

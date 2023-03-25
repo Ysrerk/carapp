@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4A4E4D"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".AdsDetailActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Ads Detail"
+        android:textColor="#F6CD61"
+        android:textSize="20dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/dsliderlayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/dadsdetailslider"
+
+            android:background="#3DA4AB"></androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="Price"
+                    android:textColor="#F6CD61">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp" android:id="@+id/dtextviewprice"
+                    android:layout_height="wrap_content" android:gravity="center"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="Price"
+                    android:textColor="#F6CD61">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="Make"
+                    android:textColor="#F6CD61">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp" android:id="@+id/dtextviewmake"
+                    android:layout_height="wrap_content" android:gravity="center"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="Make"
+                    android:textColor="#F6CD61">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="Model"
+                    android:textColor="#F6CD61">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp" android:id="@+id/dtextviewmodel"
+                    android:layout_height="wrap_content" android:gravity="center"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="Model"
+                    android:textColor="#F6CD61">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="Kilometer"
+                    android:textColor="#F6CD61">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp" android:id="@+id/dtextviewkilometer"
+                    android:layout_height="wrap_content" android:gravity="center"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="Kilometer"
+                    android:textColor="#F6CD61">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="FuelType"
+                    android:textColor="#F6CD61">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp" android:id="@+id/dtextviewfuel"
+                    android:layout_height="wrap_content" android:gravity="center"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="FuelType"
+                    android:textColor="#F6CD61">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="Year"
+                    android:textColor="#F6CD61">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp" android:id="@+id/dtextviewyear"
+                    android:layout_height="wrap_content" android:gravity="center"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="Year"
+                    android:textColor="#F6CD61">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="Province"
+                    android:textColor="#F6CD61">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp" android:id="@+id/dtextviewprovince"
+                    android:layout_height="wrap_content" android:gravity="center"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="Province"
+                    android:textColor="#F6CD61">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="City"
+                    android:textColor="#F6CD61">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp" android:id="@+id/dtextviewcity"
+                    android:layout_height="wrap_content" android:gravity="center"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="City"
+                    android:textColor="#F6CD61">
+
+                </TextView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ddescriptionbutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:text="Description">
+
+        </Button>
+
+        <Button
+            android:id="@+id/dgetfavoritebutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:text="Get Favorite">
+
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

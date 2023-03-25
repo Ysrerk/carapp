@@ -4,15 +4,18 @@ import java.util.List;
 
 import Models.Addimage;
 import Models.Ads;
+import Models.Adsdetail;
 import Models.Advresult;
 import Models.Member;
 import Models.Register;
+import Models.SliderImage;
 import Models.Verification;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public interface RestApi {
     @FormUrlEncoded
@@ -36,5 +39,11 @@ public interface RestApi {
 
     @GET("/ads.php")
     Call<List<Ads>> listads();
+
+    @GET("/adsdetail.php")
+    Call<Adsdetail> adsdetail(@Query("advid") String advid);
+
+    @GET("/adimages.php")
+    Call<List<SliderImage>> adimages(@Query("advid") String advid);
 
 }
