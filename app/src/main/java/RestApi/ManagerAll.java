@@ -7,6 +7,7 @@ import Models.Addimage;
 import Models.Ads;
 import Models.Adsdetail;
 import Models.Advresult;
+import Models.Favorite;
 import Models.Member;
 import Models.Register;
 import Models.RemoveFavorite;
@@ -75,5 +76,10 @@ public class ManagerAll  extends  BaseManager{
         Call<RemoveFavorite> removefavoritee= getRestApiClient().removefavorite(memberid,advid);
         return removefavoritee;
 
+    }
+
+    public Call<List<Favorite>>getfavorites(String memberid){
+        Call<List<Favorite>> favoritee=getRestApiClient().favorites(memberid);
+        return favoritee;
     }
 }

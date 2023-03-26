@@ -7,6 +7,7 @@ import Models.Addimage;
 import Models.Ads;
 import Models.Adsdetail;
 import Models.Advresult;
+import Models.Favorite;
 import Models.Member;
 import Models.Register;
 import Models.RemoveFavorite;
@@ -55,5 +56,8 @@ public interface RestApi {
     @FormUrlEncoded
     @POST("/removefavorite.php")
     Call<RemoveFavorite> removefavorite(@Field("memberid") String memberid, @Field("advid") String advid);
+
+    @GET("/favorites.php")
+    Call<List<Favorite>> favorites(@Query("memberid") String memberid);
 
 }
