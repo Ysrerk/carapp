@@ -248,7 +248,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
-            android:layout_weight="1"
+            android:layout_weight="1" android:textSize="10dp"
             android:text="Description">
 
         </Button>
@@ -257,11 +257,21 @@
             android:id="@+id/dgetfavoritebutton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="3dp"
+            android:layout_margin="3dp" android:textSize="10dp"
             android:layout_weight="1"
             android:text="Get Favorite">
 
         </Button>
+        <Button
+            android:id="@+id/dremovefavoritebutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1" android:textSize="10dp"
+            android:text="Del Favorite">
+
+        </Button>
+
     </LinearLayout>
 
 </LinearLayout>

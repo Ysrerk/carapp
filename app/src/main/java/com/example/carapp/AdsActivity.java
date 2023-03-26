@@ -35,6 +35,7 @@ public class AdsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent=new Intent(AdsActivity.this, AdsDetailActivity.class);
                 intent.putExtra("advid",list.get(position).getAdvid());
+                intent.putExtra("memberid",list.get(position).getMemberid());
                 startActivity(intent);
 
             }

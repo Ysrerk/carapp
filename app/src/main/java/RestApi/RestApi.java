@@ -2,12 +2,14 @@ package RestApi;
 
 import java.util.List;
 
+import Models.AddFavorite;
 import Models.Addimage;
 import Models.Ads;
 import Models.Adsdetail;
 import Models.Advresult;
 import Models.Member;
 import Models.Register;
+import Models.RemoveFavorite;
 import Models.SliderImage;
 import Models.Verification;
 import retrofit2.Call;
@@ -45,5 +47,13 @@ public interface RestApi {
 
     @GET("/adimages.php")
     Call<List<SliderImage>> adimages(@Query("advid") String advid);
+
+    @FormUrlEncoded
+    @POST("/addfavorite.php")
+    Call<AddFavorite> addfavorite(@Field("memberid") String memberid, @Field("advid") String advid);
+
+    @FormUrlEncoded
+    @POST("/removefavorite.php")
+    Call<RemoveFavorite> removefavorite(@Field("memberid") String memberid, @Field("advid") String advid);
 
 }

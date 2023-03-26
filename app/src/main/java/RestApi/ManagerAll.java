@@ -2,12 +2,14 @@ package RestApi;
 
 import java.util.List;
 
+import Models.AddFavorite;
 import Models.Addimage;
 import Models.Ads;
 import Models.Adsdetail;
 import Models.Advresult;
 import Models.Member;
 import Models.Register;
+import Models.RemoveFavorite;
 import Models.SliderImage;
 import Models.Verification;
 import retrofit2.Call;
@@ -61,6 +63,17 @@ public class ManagerAll  extends  BaseManager{
     public Call<List<SliderImage>> getadimage(String advid){
         Call<List<SliderImage>> addimage=getRestApiClient().adimages(advid);
         return addimage;
+
+    }
+
+    public Call<AddFavorite> addfavorite(String memberid, String advid){
+        Call<AddFavorite> addfavoritee= getRestApiClient().addfavorite(memberid,advid);
+        return addfavoritee;
+
+    }
+    public Call<RemoveFavorite> removefavorite(String memberid, String advid){
+        Call<RemoveFavorite> removefavoritee= getRestApiClient().removefavorite(memberid,advid);
+        return removefavoritee;
 
     }
 }
