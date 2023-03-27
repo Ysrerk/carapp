@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences.Editor editor;
     SharedPreferences preferences;
 
-    Button addnewadvbutton,adsbutton,favoritesbutton;
+    Button addnewadvbutton,adsbutton,favoritesbutton,userinfobutton;
 
 
 
@@ -67,6 +67,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        userinfobutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this, UserActivity.class);
+
+                intent.putExtra("memberid",useridv);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
@@ -78,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
         addnewadvbutton=findViewById(R.id.newadsbutton);
         adsbutton=findViewById(R.id.adsbutton);
         favoritesbutton=findViewById(R.id.favoritebutton);
+        userinfobutton=findViewById(R.id.usertinfobutton);
     }
 
     public void getvaluefromintent(){

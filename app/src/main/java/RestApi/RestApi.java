@@ -12,6 +12,8 @@ import Models.Member;
 import Models.Register;
 import Models.RemoveFavorite;
 import Models.SliderImage;
+import Models.User;
+import Models.UserUpdate;
 import Models.Verification;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -59,5 +61,12 @@ public interface RestApi {
 
     @GET("/favorites.php")
     Call<List<Favorite>> favorites(@Query("memberid") String memberid);
+
+    @GET("/user.php")
+    Call<User> user(@Query("memberid") String memberid);
+
+    @FormUrlEncoded
+    @POST("/userupdate.php")
+    Call<UserUpdate> userupdate(@Field("memberid") String memberid, @Field("email") String email, @Field("phone") String phone);
 
 }

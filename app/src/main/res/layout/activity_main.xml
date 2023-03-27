@@ -95,7 +95,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/contactinfobutton"
+                android:id="@+id/usertinfobutton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -103,7 +103,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="@color/butonrengi"
                 android:drawableTop="@drawable/contact"
-                android:text="Contact Info"
+                android:text="User Info"
                 android:textStyle="bold"></Button>
 
             <Button

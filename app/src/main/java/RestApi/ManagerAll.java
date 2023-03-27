@@ -12,6 +12,8 @@ import Models.Member;
 import Models.Register;
 import Models.RemoveFavorite;
 import Models.SliderImage;
+import Models.User;
+import Models.UserUpdate;
 import Models.Verification;
 import retrofit2.Call;
 
@@ -81,5 +83,16 @@ public class ManagerAll  extends  BaseManager{
     public Call<List<Favorite>>getfavorites(String memberid){
         Call<List<Favorite>> favoritee=getRestApiClient().favorites(memberid);
         return favoritee;
+    }
+
+    public Call<User> getuserinfo(String memberid){
+        Call<User> userinfo=getRestApiClient().user(memberid);
+        return userinfo;
+
+    }
+    public Call<UserUpdate> userupdateinfo(String memberid, String email, String phone){
+        Call<UserUpdate> userupdate= getRestApiClient().userupdate(memberid,email,phone);
+        return userupdate;
+
     }
 }
